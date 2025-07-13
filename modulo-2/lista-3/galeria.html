@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 300px;
+        }
+
+        .img-container {
+            display: grid;
+            gap: .5em;
+            grid-template-rows: 1fr;
+            margin: 1em;
+            color: #dfdfdf;
+            text-align: center;
+        }
+
+        .galery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding-left: 150px;
+            padding-right: 150px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="galery-container">
+            <div class="img-container">                
+                <img src="assets/img1.jpg" alt="">
+                <label>Legenda</label>
+            </div>
+            <div class="img-container">              
+                <img src="assets/img2.jpg" alt="">
+                <label>Legenda</label>
+            </div>
+            <div class="img-container">          
+                <img src="assets/img3.jpg" alt="">
+                <label>Legenda</label>
+            </div>
+            <div class="img-container"> 
+                <img src="assets/img4.jpg" alt="">
+                <label>Legenda</label>
+            </div>
+            <div class="img-container">         
+                <img src="assets/img5.jpg" alt="">
+                <label>Legenda</label>
+            </div>
+            <div class="img-container">           
+                <img src="assets/img6.jpg" alt="">
+                <label>Legenda</label>
+            </div>
+            <div class="img-container">              
+                <img src="assets/img7.jpg" alt="">
+                <label>Legenda</label>
+            </div>
+            <div class="img-container">               
+                <img src="assets/img8.jpg" alt="">
+                <label>Legenda</label>
+            </div>
+    </div>
+</body>
+
+</html>

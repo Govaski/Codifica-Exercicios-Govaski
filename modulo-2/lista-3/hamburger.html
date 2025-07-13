@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Hamburger</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        header {
+            margin: 0;
+            display: sticky;
+        }
+
+        .normal-nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .normal-nav > * {
+            padding-right: 1em;
+        }
+
+        .btn-hamburger {
+            display: none;
+            background: none;
+            padding: .5em;
+            margin: 0;
+            border: 0;
+        }
+
+        .side-nav {
+            display: none;
+            position: fixed;
+            left: 0;
+            flex-direction: column;
+            background-color: #192734;
+            border-right: 1px solid #8899;
+            border-left: 1px solid #8899;
+            height: 100%;
+            width: 20%;
+            padding: .5em;
+        }
+
+        @media (width <= 600px) {
+            header {
+                margin: 0;
+                padding: 0;
+                position: sticky;
+                width: 100%;
+            }
+            
+            .btn-hamburger {
+                display: block;
+            }
+
+            .normal-nav {
+                display: none;
+            }
+
+            .side-nav > * {
+                margin-bottom: 1em;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <button class="btn-hamburger" id="btn-hamburger">
+            <img src="assets/Hamburger_icon.svg" alt="">
+        </button>
+
+        <nav class="normal-nav">
+            <a href="">Link 1</a>
+            <a href="">Link 2</a>
+            <a href="">Link 3</a>
+        </nav>
+
+        <nav class="side-nav" id="side-nav">
+            <a href="">Link 1</a>
+            <a href="">Link 2</a>
+            <a href="">Link 3</a>
+        </nav>
+    </header>
+</body>
+
+<script src="app.js"></script>
+</html>
