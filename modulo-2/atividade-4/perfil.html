@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
 <body>
     <header>
@@ -29,29 +31,29 @@
         <section id="sobre">
             <h2>Sobre Mim</h2>
             <p>
-                Eu tenho 17 anos, comecei a me interessar por computadores em 2017. Sou desenvolvedor Web e gosto de estudar sobre computadores no meu tempo livre. Desenvolvo em HTML, CSS e Javascript, além de praticar em C/C++ e C# por diversão.
+                <!-- Eu tenho 17 anos, comecei a me interessar por computadores em 2017. Sou desenvolvedor Web e gosto de estudar sobre computadores no meu tempo livre. Desenvolvo em HTML, CSS e Javascript, além de praticar em C/C++ e C# para aprimorar minhas habilidades. -->
+                 Eu tenho 17 anos, e me dedico ao estudo dos computadores e suas tecnologias desde meus 12 anos. Sou desenvolvedor Web e trabalho com HTML, CSS e Javascript, além de praticar em C/C++ e C# para aprimorar minhas habilidades. Sou extremamente focado e a cada momento busco aprender mais para estar atualizado com as mais novas praticas na tecnologia.
             </p>
         </section>
 
         <section id="habilidades">
             <h2>Habilidades</h2>
-            <ul>
-                <li>Aprendo rápido</li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+                <div class="skills-container">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
+            </div>
+
+
         </section>
 
         <section id="projetos">
             <h2>Projetos</h2>
-            <p>Mostrar o emulador do CHIP-8 e a engine</p>
-        </section>
-
-        <section id="contato">
-            <h2>Contato</h2>
-            <a href="mailto:joaopedrogovaski@gmail.com">Email: joaopedrogovaski@gmail.com</a>
+            <h4>Emulador do computador Chip-8</h4>
+            <img src="" alt="Imagem do Emulador">
+            <h4>Site de lista de compras</h4>
+            <img src="assets/site_lista_compras.png" alt="Imagem do Emulador">
         </section>
 
         <section>
@@ -66,12 +68,26 @@ de Harvard, no Brasil</a></li>
             </article>
         </section>
 
+        <section id="contato">
+            <h2>Contato</h2>
+            <form class="contact-form">
+                <Input placeholder="Nome"></Input>
+                <Input placeholder="Email"></Input>
+                <textarea placeholder="Mensagem"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
         <section>
-            <aside>
-                <h2>Outros Links</h2>
-                <div class="extra-links">
+            <h2>Outros Links</h2>
+            <aside class="extra-links">
+                <div>
                     <img src="assets/github-icons/github-mark-white.svg" alt="Icone do Github" style="width: 20px;">
                     <a href="https://github.com/Govaski">Github</a>
+                </div>
+                <div>   
+                    <img src="assets/email.svg" alt="Icone de Email" style="width: 20px;">
+                    <a href="mailto:joaopedrogovaski@gmail.com">Email</a>
                 </div>
             </aside>
         </section>
