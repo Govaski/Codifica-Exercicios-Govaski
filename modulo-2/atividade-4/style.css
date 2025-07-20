@@ -21,7 +21,6 @@ body {
 }
 
 header{
-    /* border: 1px black solid; */
     color: var(--bright-pastel-green);
     display: flex;
     justify-content: space-between;
@@ -31,7 +30,6 @@ header{
 }
 
 main {
-    /* border: 1px black solid; */
     width: 50%;
 }
 
@@ -76,30 +74,25 @@ li {
     margin-left: 1rem;
 }
 
-img {
-    width: 300px;
-}
-
-img:hover{
-    transform: scale(1.1);
-}
-
-
-.extra-links{
-    display: flex;
-    align-items: center;
-}
-
-.extra-links div {
-    margin-right: .5em;
-    display: flex;
-}
-
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: .5rem;
+}
+
+.extra-links-container{
+    display: flex;
+    align-items: center;
+}
+
+.extra-link {
+    margin-right: .5em;
+    display: flex;
+}
+
+.extra-link:hover {
+    transform: scale(1.1);
 }
 
 .profile-container {
@@ -151,7 +144,7 @@ footer {
     border-radius: 3px;
 }
 
-button:hover {
+.contact-form button:hover {
     background-color: #00812a;
 }
 
@@ -160,7 +153,17 @@ button:hover {
 }
 
 .skills-container img:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
+}
+
+.project-container, .project-container img, video {
+    width: 300px;
+    padding: 0.5rem;
+}
+
+.project-container:hover {
+    transform: scale(1.1);
+    color: var(--bright-pastel-green);
 }
 
 @media (max-width: 1024px) {
