@@ -57,7 +57,7 @@
 
             <div class="project-container">
                 <h4>Emulador do computador Chip-8</h4>
-                <video autoplay loop muted style="width: 300px;">
+                <video id="chip8-video" loop muted style="width: 300px;">
                     <source src="assets/chip8.webm" type="video/webm" alt="Imagem do Emulador" >
                 </video>    
             </div>
@@ -77,10 +77,12 @@ de Harvard, no Brasil</a></li>
 
         <section id="contato">
             <h2>Contato</h2>
-            <form class="contact-form">
-                <Input placeholder="Nome"></Input>
-                <Input placeholder="Email"></Input>
-                <textarea placeholder="Mensagem"></textarea>
+            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" onsubmit="this.submit(); this.reset(); return false;">
+                <input type="hidden" name="access_key" value="3fc07331-1ea7-4dfd-bace-b4db6323c071">
+                <Input type="text" name="name" required placeholder="Nome"></Input>
+                <Input type="email" name="email" required placeholder="Email"></Input>
+                <textarea name="message" required placeholder="Mensagem"></textarea>
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                 <button type="submit">Enviar</button>
             </form>
         </section>
@@ -104,6 +106,20 @@ de Harvard, no Brasil</a></li>
         </footer>
 
     </main>
-
 </body>
+
+<script>
+    const video = document.getElementById("chip8-video")
+    video.currentTime = 125
+    video.addEventListener("mouseenter", () => {
+        video.play()
+    })
+
+    video.addEventListener("mouseleave", () => {
+        video.pause()
+        video.currentTime = 125
+    })
+
+</script>
+
 </html>
