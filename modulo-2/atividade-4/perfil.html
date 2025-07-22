@@ -25,41 +25,54 @@
             <a href="#projetos">Projetos</a>
             <a href="#contato">Contato</a>
         </nav>
+
+        <button class="toggle-nav-btn" onclick="ToggleMobileNav()">
+            <ion-icon name="menu-outline"></ion-icon>
+        </button>
+
+        <nav id="mobile-nav" class="mobile-nav">
+            <a href="#sobre">Sobre</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
     </header>
     
     <main>
         <section id="sobre">
             <h2>Sobre Mim</h2>
             <p>
-                <!-- Eu tenho 17 anos, comecei a me interessar por computadores em 2017. Sou desenvolvedor Web e gosto de estudar sobre computadores no meu tempo livre. Desenvolvo em HTML, CSS e Javascript, além de praticar em C/C++ e C# para aprimorar minhas habilidades. -->
                  Eu tenho 17 anos, e me dedico ao estudo dos computadores e suas tecnologias desde meus 12 anos. Sou desenvolvedor Web e trabalho com HTML, CSS e Javascript, além de praticar em C/C++ e C# para aprimorar minhas habilidades. Sou extremamente focado e a cada momento busco aprender mais para estar atualizado com as mais novas praticas na tecnologia.
             </p>
         </section>
 
         <section id="habilidades">
             <h2>Habilidades</h2>
-                <div class="skills-container">
+            <div class="skills-container">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg" />
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
             </div>
-
-
         </section>
 
         <section id="projetos">
             <h2>Projetos</h2>
             <div class="project-container">
-                <h4>Site de lista de compras</h4>
-                <img src="assets/site_lista_compras.png" alt="Imagem do Emulador">
+                <a href="https://github.com/Govaski/Small-Web-Projects/tree/01a52628a9f991208d104711a17f3640ecb65b33/shopping-list">
+                    <h4>Site de lista de compras</h4>
+                    <img src="assets/site_lista_compras.png" alt="Imagem da Lista de Compras">
+                </a>
             </div>
 
             <div class="project-container">
-                <h4>Emulador do computador Chip-8</h4>
-                <video id="chip8-video" loop muted style="width: 300px;">
-                    <source src="assets/chip8.webm" type="video/webm" alt="Imagem do Emulador" >
-                </video>    
+                <a href="https://github.com/Govaski/Chip8-Emulator-Dotnet">
+                    <h4>Emulador do computador Chip-8</h4>
+                    <video id="chip8-video" loop muted style="width: 300px;">
+                        <source src="assets/chip8.webm" type="video/webm" alt="Imagem do Emulador" >
+                    </video>    
+                </a>
             </div>
         </section>
 
@@ -108,7 +121,11 @@ de Harvard, no Brasil</a></li>
     </main>
 </body>
 
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 <script>
+    const mobileNav = document.getElementById("mobile-nav")
     const video = document.getElementById("chip8-video")
     video.currentTime = 125
     video.addEventListener("mouseenter", () => {
@@ -120,6 +137,19 @@ de Harvard, no Brasil</a></li>
         video.currentTime = 125
     })
 
-</script>
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 768) {
+            mobileNav.style.display = "none"
+        }
+    })
 
+    function ToggleMobileNav() {
+        if (mobileNav.style.display == "none"){
+            mobileNav.style.display = "flex"
+        } else {
+            mobileNav.style.display = "none"
+        }
+    }
+
+</script>
 </html>
