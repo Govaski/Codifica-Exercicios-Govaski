@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom"
-import styles from './Header.module.css'
 import { CiLight, CiDark } from "react-icons/ci";
 import { FaShoppingCart } from "react-icons/fa";
 import {useTheme} from '../../contexts/Theme'
@@ -9,19 +8,19 @@ export default function Header(){
     const {theme, toggleTheme} = useTheme()
 
     return (
-        <header className={`${styles.header} ${theme == 'light' ? styles.headerLight : styles.headerDark}`}>
+        <header className={`${"header"} ${theme == 'dark' ? "headerDark" : "headerLight"}`}>
             <nav>
                 
-                <Link to='/' className={theme == 'light' ? styles.LinkLight : styles.LinkDark}>
-                    <img className={styles.icon} src="src\assets\logo.svg" alt="logo" />
+                <Link to='/' className="icon">
+                    <img className="icon" src="src\assets\logo.svg" alt="logo" />
                 </Link>
-                <Link to='/' className={theme == 'light' ? styles.LinkLight : styles.LinkDark}>Loja</Link>
-                <Link to='/' className={theme == 'light' ? styles.LinkLight : styles.LinkDark}>Categorias</Link>
-                <Link to='/' className={theme == 'light' ? styles.LinkLight : styles.LinkDark}>Contato</Link>
-                <Link to='/about' className={theme == 'light' ? styles.LinkLight : styles.LinkDark}>Sobre</Link>
+                <Link to='/' className={theme == 'dark' ? "LinkDark" : "LinkLight"}>Loja</Link>
+                <Link to='/' className={theme == 'dark' ? "LinkDark" : "LinkLight"}>Categorias</Link>
+                <Link to='/' className={theme == 'dark' ? "LinkDark" : "LinkLight"}>Contato</Link>
+                <Link to='/about' className={theme == 'dark' ? "LinkDark" : "LinkLight"}>Sobre</Link>
             </nav>
-            <div className={styles.rightHeader}>
-                <button onClick={toggleTheme} className={theme == 'light' ?styles.themeSelectorLight :styles.themeSelectorDark}>
+            <div className="rightHeader">
+                <button onClick={toggleTheme} className={theme == 'dark' ? "themeSelectorDark" : "themeSelectorLight"}>
                     {
                         theme == 'dark' ? <CiLight/> : <CiDark/>
                     }
