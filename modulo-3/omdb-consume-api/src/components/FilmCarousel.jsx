@@ -27,13 +27,12 @@ export default function FilmCarousel(props) {
             >
                 
             {
-            homepageFilms.map(film => {
+                homepageFilms.map(film => {
                 return <SwiperSlide>
                     <FilmCardById size={props.size} film={film}/>
                 </SwiperSlide>
-            })
+                })
             }
-
             </Swiper>
         </section>
     )
